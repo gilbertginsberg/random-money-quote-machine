@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>GILBERT'S RANDOM MONEY QUOTES</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+      <main>
+        <button id="newquote">NEW MONEY QUOTE</button>
+        <p id="quote"></p>
+      </main>
+      <footer>
+        <p>By <a href="https://twitter.com/gilbertginsberg">@gilbertginsberg</a>
+      </footer>
+
+      <script>
+        var quote = document.getElementById('quote');
+
+        var newquote = document.getElementById('newquote');
+
+        var quotesArr = ['Those who early retire fly higher.',
+        'If you\'re worried about what Market does today (see short term), it might be time to reevaluate your investing strategy. Play the long game.',
+        'Remember: taking out a mortgage does not mean you "buy" a house. It means you fall into debt.',
+        'You ask: How do you become rich? I answer: You fear debt like you would a scary witch.',
+        'Stash cash and you\'ll be out of the rat race in a dash.',
+        'Remember to stay committed to low financial fees because that\'s how you\'ll find yourself with a lot of cheese.',
+        'If you see an ad for a product on cable TV, (more times than not) quality it mustn\'t be.',
+        'If you want your net worth to grow, remember to keep your money fees low.',
+        'Be pragmatic and set your (mutual fund) investments to automatic.',
+        'Remember the best investing aim is to play the long game.',
+        'If you save and avoid debt, financial independence is what you\'ll beget.',
+        'Remember that terms like Mortgage, Credit, and Loan are nothing more than word farts for debt to the bone.',
+        'If you want to early retire, limit a desire. And then another. And another. Because your savings will sooner or later climb higher.',
+        'Don\'t forget you never want debt.',
+        'If you think you need a car, your path to financial independence is very far.',
+        'If freedom is what you crave, you’ll realize sooner or later you can buy it and save.',
+        'The lower the mutual fund’s expense ratio, the faster you’ll escape financial limbo.',
+        'You ask: what’s a mutual fund expense ratio? I answer: It’s nothing more than a fee, yo.',
+        'If a man wants to manage your money, remember it’s to feed HIS tummy.',
+        'If you understand compound interest, your study of financial independence is finished.',
+        'Those who save money do not feel crummy.',
+        'Those who make saving a habit never look at their bank account and say dag nabbit.',
+        'If you give your money to an investment broker, you might find yourself wondering why you\'re broke-er.',
+        'Handle your money yourself because an investment broker will treat it like chips in a game of poker.',
+        'If WellsFargo is still your bank, that means you have yet to smell its stank.',
+        'If you don\'t know a financial product\'s price, it must not be nice.'];
+
+        newquote.onclick = function() {
+          quote.innerHTML = quotesArr[Math.floor(Math.random() * quotesArr.length)];
+        };
+
+      </script>
+
+  </body>
+</html>
