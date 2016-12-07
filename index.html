@@ -9,6 +9,7 @@
   <body>
       <main>
         <button id="newquote">NEW MONEY QUOTE</button>
+        <button id="tweet">TWEET</button>
         <p id="quote"></p>
       </main>
       <footer>
@@ -45,7 +46,8 @@
         'If you give your money to an investment broker, you might find yourself wondering why you\'re broke-er.',
         'Handle your money yourself because an investment broker will treat it like chips in a game of poker.',
         'If WellsFargo is still your bank, that means you have yet to smell its stank.',
-        'If you don\'t know a financial product\'s price, it must not be nice.'];
+        'If you don\'t know a financial product\'s price, it must not be nice.',
+        '"If you put nothing away for retirement, I can tell you, to the last penny, how much you will have when you retire: nothing" — Jack Bogle'];
 
         newquote.onclick = function() {
           quote.innerHTML = quotesArr[Math.floor(Math.random() * quotesArr.length)];
