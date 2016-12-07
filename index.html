@@ -5,21 +5,25 @@
     <meta charset="utf-8">
     <title>GILBERT'S RANDOM MONEY QUOTES</title>
     <link href="styles.css" rel="stylesheet">
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
   </head>
   <body>
       <main>
         <button id="newquote">NEW MONEY QUOTE</button>
-        <button id="tweet">TWEET</button>
-        <p id="quote"></p>
+        <a id="tweet-button" href="https://twitter.com/intent/tweet?&via=gilbertginsberg&hashtags=GILBERT&text=Those%20who%20early%20retire%20fly%20higher."><button id="tweet">TWEET</button></a>
+        <p id="quote">Those who early retire fly higher.</p>
       </main>
       <footer>
         <p>By <a href="https://twitter.com/gilbertginsberg">@gilbertginsberg</a>
       </footer>
 
       <script>
+      window.onload = function() {
         var quote = document.getElementById('quote');
 
         var newquote = document.getElementById('newquote');
+
+        var tweetIntent = document.getElementById("tweet-button");
 
         var quotesArr = ['Those who early retire fly higher.',
         'If you\'re worried about what Market does today (see short term), it might be time to reevaluate your investing strategy. Play the long game.',
@@ -49,10 +53,16 @@
         'If you don\'t know a financial product\'s price, it must not be nice.',
         '"If you put nothing away for retirement, I can tell you, to the last penny, how much you will have when you retire: nothing" — Jack Bogle'];
 
+        /*newquote.onclick = function() {
+          quote.innerHTML = quotesArr[Math.floor(Math.random() * quotesArr.length)];
+          tweetIntent.href = "https://twitter.com/intent/tweet?&via=gilbertginsberg&hashtags=GILBERT&text=" + quote.innerHTML;
+        } */
+
         newquote.onclick = function() {
           quote.innerHTML = quotesArr[Math.floor(Math.random() * quotesArr.length)];
+          tweetIntent.href = "https://twitter.com/intent/tweet?&via=gilbertginsberg&hashtags=GILBERT&text=" + quote.innerHTML;
         };
-
+      }
       </script>
 
   </body>
